@@ -10,6 +10,9 @@ const addUser = ({id,userName,roomName}) =>{
     if(!userName || !roomName){
         return {error:'Username and room are required'}
     }
+    if(userName ==='admin'){
+        return {error:"Username not valid"}
+    }
 
     const existingUser = users.find((user)=>{
         return user.roomName===roomName && user.userName===userName
@@ -59,3 +62,5 @@ module.exports={
     getUser,
     getUsersInRoom
 }
+
+console.log(getUsersInRoom("manav"))
