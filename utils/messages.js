@@ -21,7 +21,7 @@ const generateAdminMessage = (id,msg,roomName)=>{
         id:id,
         roomName:roomName
     }
-    addMsg(msgobject)
+    // addMsg(msgobject)
     return msgobject
 }
 
